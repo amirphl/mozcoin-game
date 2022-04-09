@@ -739,19 +739,21 @@
             "GlobalVariableString(user.name)"
           ],
           "subInstructions": []
+        },
+        {
+          "type": {
+            "inverted": false,
+            "value": "ChangeAnimation"
+          },
+          "parameters": [
+            "current_coin_logo",
+            "=",
+            "GlobalVariable(selected_coin_index)"
+          ],
+          "subInstructions": []
         }
       ],
-      "events": [
-        {
-          "disabled": false,
-          "folded": false,
-          "type": "BuiltinCommonInstructions::JsCode",
-          "inlineCode": "// display current selected coin\nfunction display_current_selected_coin() {\n    const selected_coin_index = runtimeScene.getGame().getVariables().get(\"selected_coin_index\").getAsNumber();\n    const coins_info = runtimeScene.getGame().getVariables().get(\"coins_info\");\n    const coins_names = Object.keys(coins_info.getAllChildren());\n\n    // TODO\n    if (coins_names.length === 0) {\n        console.error(\"no coin found: \", coins_names);\n        return;\n    }\n\n    // TODO\n    if (selected_coin_index >= coins_names.length) {\n        console.warn(\"requesting an index greater than or equal to coins length: \", selected_coin_index, coins_names.length);\n        selected_coin_index = 0;\n    }\n\n    const selected_coin_name = coins_names[selected_coin_index];\n    const current_coin_logo_objs = runtimeScene.getObjects(\"current_coin_logo\");\n\n    // TODO\n    if (current_coin_logo_objs.length === 0) {\n        console.error(\"no current_coin_logo object found: \", current_coin_logo_objs);\n        return;\n    }\n\n    current_coin_logo_objs[0].setAnimationName(selected_coin_name);\n}\n\ndisplay_current_selected_coin();",
-          "parameterObjects": "",
-          "useStrict": true,
-          "eventsSheetExpanded": false
-        }
-      ]
+      "events": []
     },
     {
       "disabled": false,
@@ -813,67 +815,6 @@
         "textG": 0,
         "textR": 0
       },
-      "comment": "navigate to `settings` page",
-      "comment2": ""
-    },
-    {
-      "disabled": false,
-      "folded": false,
-      "type": "BuiltinCommonInstructions::Standard",
-      "conditions": [
-        {
-          "type": {
-            "inverted": false,
-            "value": "SourisSurObjet"
-          },
-          "parameters": [
-            "settings_logo",
-            "",
-            "",
-            ""
-          ],
-          "subInstructions": []
-        },
-        {
-          "type": {
-            "inverted": false,
-            "value": "MouseButtonPressed"
-          },
-          "parameters": [
-            "",
-            "Left"
-          ],
-          "subInstructions": []
-        }
-      ],
-      "actions": [
-        {
-          "type": {
-            "inverted": false,
-            "value": "Scene"
-          },
-          "parameters": [
-            "",
-            "\"settings\"",
-            ""
-          ],
-          "subInstructions": []
-        }
-      ],
-      "events": []
-    },
-    {
-      "disabled": false,
-      "folded": false,
-      "type": "BuiltinCommonInstructions::Comment",
-      "color": {
-        "b": 109,
-        "g": 230,
-        "r": 255,
-        "textB": 0,
-        "textG": 0,
-        "textR": 0
-      },
       "comment": "navigate to `price prediction` page",
       "comment2": ""
     },
@@ -916,6 +857,67 @@
           "parameters": [
             "",
             "\"prediction\"",
+            ""
+          ],
+          "subInstructions": []
+        }
+      ],
+      "events": []
+    },
+    {
+      "disabled": false,
+      "folded": false,
+      "type": "BuiltinCommonInstructions::Comment",
+      "color": {
+        "b": 109,
+        "g": 230,
+        "r": 255,
+        "textB": 0,
+        "textG": 0,
+        "textR": 0
+      },
+      "comment": "navigate to `settings` page",
+      "comment2": ""
+    },
+    {
+      "disabled": false,
+      "folded": false,
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [
+        {
+          "type": {
+            "inverted": false,
+            "value": "SourisSurObjet"
+          },
+          "parameters": [
+            "settings_logo",
+            "",
+            "",
+            ""
+          ],
+          "subInstructions": []
+        },
+        {
+          "type": {
+            "inverted": false,
+            "value": "MouseButtonPressed"
+          },
+          "parameters": [
+            "",
+            "Left"
+          ],
+          "subInstructions": []
+        }
+      ],
+      "actions": [
+        {
+          "type": {
+            "inverted": false,
+            "value": "Scene"
+          },
+          "parameters": [
+            "",
+            "\"settings\"",
             ""
           ],
           "subInstructions": []
@@ -1253,18 +1255,20 @@
           ]
         }
       ],
-      "actions": [],
-      "events": [
+      "actions": [
         {
-          "disabled": false,
-          "folded": false,
-          "type": "BuiltinCommonInstructions::JsCode",
-          "inlineCode": "const is_right_arrow_hovered = runtimeScene.getObjects(\"right_arrow_logo\")[0].cursorOnObject(runtimeScene);\nconst selected_coin_index = runtimeScene.getGame().getVariables().get(\"selected_coin_index\").getAsNumber();\nconst coins_info = runtimeScene.getGame().getVariables().get(\"coins_info\");\nconst coins_names = Object.keys(coins_info.getAllChildren());\nlet next_coin_index;\n\nif (is_right_arrow_hovered) {\n    next_coin_index = (selected_coin_index == 0) ? coins_names.length : selected_coin_index;\n    next_coin_index--;\n} else { // so `is_left_arrow_hovered` is hovered\n    next_coin_index = (selected_coin_index == coins_names.length - 1) ? -1 : selected_coin_index;\n    next_coin_index++;\n}\n\nruntimeScene.getGame().getVariables().get(\"selected_coin_index\").setNumber(next_coin_index);\nconst current_coin_logo = runtimeScene.getObjects(\"current_coin_logo\")[0];\ncurrent_coin_logo.setAnimationName(coins_names[next_coin_index]);",
-          "parameterObjects": "",
-          "useStrict": true,
-          "eventsSheetExpanded": false
+          "type": {
+            "inverted": false,
+            "value": "Utils::select_next_coin"
+          },
+          "parameters": [
+            "",
+            ""
+          ],
+          "subInstructions": []
         }
-      ]
+      ],
+      "events": []
     }
   ],
   "layers": [
