@@ -1,0 +1,795 @@
+{
+  "firstLayout": "loading",
+  "gdVersion": {
+    "build": 99,
+    "major": 4,
+    "minor": 0,
+    "revision": 0
+  },
+  "properties": {
+    "adaptGameResolutionAtRuntime": true,
+    "folderProject": true,
+    "orientation": "landscape",
+    "packageName": "ir.mozcoin",
+    "pixelsRounding": false,
+    "projectUuid": "eb39584f-3fdf-4ed4-ac90-8dfdd8d4bed3",
+    "scaleMode": "linear",
+    "sizeOnStartupMode": "",
+    "useExternalSourceFiles": false,
+    "version": "1.0.0",
+    "name": "Mozcoin",
+    "description": "cryptocurrecy price prediction",
+    "author": "",
+    "windowWidth": 1920,
+    "windowHeight": 1080,
+    "latestCompilationDirectory": "",
+    "maxFPS": 60,
+    "minFPS": 20,
+    "verticalSync": false,
+    "platformSpecificAssets": {},
+    "loadingScreen": {
+      "backgroundColor": 0,
+      "backgroundFadeInDuration": 0.2,
+      "backgroundImageResourceName": "",
+      "gdevelopLogoStyle": "light",
+      "logoAndProgressFadeInDuration": 0.2,
+      "logoAndProgressLogoFadeInDelay": 0.2,
+      "minDuration": 1.5,
+      "progressBarColor": 16777215,
+      "progressBarHeight": 20,
+      "progressBarMaxWidth": 200,
+      "progressBarMinWidth": 40,
+      "progressBarWidthPercent": 30,
+      "showGDevelopSplash": true,
+      "showProgressBar": true
+    },
+    "authorIds": [],
+    "categories": [],
+    "playableDevices": [],
+    "extensionProperties": [
+      {
+        "extension": "Firebase",
+        "property": "FirebaseConfig",
+        "value": "{\n  \"apiKey\": \"AIzaSyDeG6cNdHf1TRHeSvi6yhR83E5Ti0HQrUg\",\n  \"authDomain\": \"mozcoingame-72b2c.firebaseapp.com\",\n  \"projectId\": \"mozcoingame-72b2c\",\n  \"storageBucket\": \"mozcoingame-72b2c.appspot.com\",\n  \"messagingSenderId\": \"499296654560\",\n  \"appId\": \"1:499296654560:web:575611ec4592765b4c6c85\"\n}"
+      }
+    ],
+    "platforms": [
+      {
+        "name": "GDevelop JS platform"
+      }
+    ],
+    "currentPlatform": "GDevelop JS platform"
+  },
+  "resources": {
+    "resources": [
+      {
+        "alwaysLoaded": false,
+        "file": "assets/Close round button.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Close round button.png",
+        "smoothed": true,
+        "userAdded": false,
+        "origin": {
+          "identifier": "https://resources.gdevelop-app.com/assets/On-Screen Controls/Sprites/Flat Dark/Close round button.png",
+          "name": "gdevelop-asset-store"
+        }
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/Close round button3.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Close round button.png3",
+        "smoothed": true,
+        "userAdded": false,
+        "origin": {
+          "identifier": "https://resources.gdevelop-app.com/assets/On-Screen Controls/Sprites/Shaded Dark/Close round button.png",
+          "name": "gdevelop-asset-store"
+        }
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/Brown Box_No Shadow.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Brown Box_No Shadow.png",
+        "smoothed": true,
+        "userAdded": false,
+        "origin": {
+          "identifier": "https://resources.gdevelop-app.com/assets/Interface/PX UI Basic/Brown Box_No Shadow.png",
+          "name": "gdevelop-asset-store"
+        }
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/Brown Box_Shadow.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Brown Box_Shadow.png",
+        "smoothed": true,
+        "userAdded": false,
+        "origin": {
+          "identifier": "https://resources.gdevelop-app.com/assets/Interface/PX UI Basic/Brown Box_Shadow.png",
+          "name": "gdevelop-asset-store"
+        }
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "pngfind.com-tree-branches-png-12648.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "pngfind.com-tree-branches-png-12648.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "background2.jpg",
+        "kind": "image",
+        "metadata": "",
+        "name": "background2.jpg",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "moz.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "moz.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "tl.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "tl.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "background3.jpg",
+        "kind": "image",
+        "metadata": "",
+        "name": "background3.jpg",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "owl2.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "owl2.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "bitcoin.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "bitcoin.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "imgbin_owl-education-teacher-illustration-png.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "imgbin_owl-education-teacher-illustration-png.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Cucumber.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Cucumber.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "clipart114143.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "clipart114143.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "news0.PNG",
+        "kind": "image",
+        "metadata": "",
+        "name": "news0.PNG",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/Next_Grey.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Next_Grey.png",
+        "smoothed": true,
+        "userAdded": false,
+        "origin": {
+          "identifier": "https://resources.gdevelop-app.com/assets/Interface/Simple Wares Buttons/Next_Grey.png",
+          "name": "gdevelop-asset-store"
+        }
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/Previous_Grey.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Previous_Grey.png",
+        "smoothed": true,
+        "userAdded": false,
+        "origin": {
+          "identifier": "https://resources.gdevelop-app.com/assets/Interface/Simple Wares Buttons/Previous_Grey.png",
+          "name": "gdevelop-asset-store"
+        }
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "end.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "end.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "select_timeframe.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "select_timeframe.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "katibeh-removebg-preview.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "katibeh-removebg-preview.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Forest_Landscape.jpg",
+        "kind": "image",
+        "metadata": "",
+        "name": "Forest_Landscape.jpg",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "download (2).png",
+        "kind": "image",
+        "metadata": "",
+        "name": "download (2).png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "download (1).png",
+        "kind": "image",
+        "metadata": "",
+        "name": "download (1).png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "download (3).png",
+        "kind": "image",
+        "metadata": "",
+        "name": "download (3).png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "menu.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "menu.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "download (5).png",
+        "kind": "image",
+        "metadata": "",
+        "name": "download (5).png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "download (6).png",
+        "kind": "image",
+        "metadata": "",
+        "name": "download (6).png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "—Pngtree—game leaderboard ui interface retro_6055557.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "—Pngtree—game leaderboard ui interface retro_6055557.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "inputInnactive.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "inputInnactive.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "inputHighlight.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "inputHighlight.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "user.webp",
+        "kind": "image",
+        "metadata": "",
+        "name": "user.webp",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/Triangle.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Triangle.png",
+        "smoothed": true,
+        "userAdded": false,
+        "origin": {
+          "identifier": "https://resources.gdevelop-app.com/assets/Interface/16x16 Pixel PS4 Controller Buttons/Triangle.png",
+          "name": "gdevelop-asset-store"
+        }
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/Square joystick (outer).png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Square joystick (outer).png",
+        "smoothed": true,
+        "userAdded": false,
+        "origin": {
+          "identifier": "https://resources.gdevelop-app.com/assets/On-Screen Controls/Sprites/Line Dark/Square joystick (outer).png",
+          "name": "gdevelop-asset-store"
+        }
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "rec.PNG",
+        "kind": "image",
+        "metadata": "",
+        "name": "rec.PNG",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/Home_Blue.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Home_Blue.png",
+        "smoothed": true,
+        "userAdded": false,
+        "origin": {
+          "identifier": "https://resources.gdevelop-app.com/assets/Interface/Simple Wares Buttons/Home_Blue.png",
+          "name": "gdevelop-asset-store"
+        }
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/Home_Green.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Home_Green.png",
+        "smoothed": true,
+        "userAdded": false,
+        "origin": {
+          "identifier": "https://resources.gdevelop-app.com/assets/Interface/Simple Wares Buttons/Home_Green.png",
+          "name": "gdevelop-asset-store"
+        }
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/Home_Red.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Home_Red.png",
+        "smoothed": true,
+        "userAdded": false,
+        "origin": {
+          "identifier": "https://resources.gdevelop-app.com/assets/Interface/Simple Wares Buttons/Home_Red.png",
+          "name": "gdevelop-asset-store"
+        }
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/Home_Grey.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Home_Grey.png",
+        "smoothed": true,
+        "userAdded": false,
+        "origin": {
+          "identifier": "https://resources.gdevelop-app.com/assets/Interface/Simple Wares Buttons/Home_Grey.png",
+          "name": "gdevelop-asset-store"
+        }
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/Home_Yellow.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Home_Yellow.png",
+        "smoothed": true,
+        "userAdded": false,
+        "origin": {
+          "identifier": "https://resources.gdevelop-app.com/assets/Interface/Simple Wares Buttons/Home_Yellow.png",
+          "name": "gdevelop-asset-store"
+        }
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/Check round button.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Check round button.png",
+        "smoothed": true,
+        "userAdded": false,
+        "origin": {
+          "identifier": "https://resources.gdevelop-app.com/assets/On-Screen Controls/Sprites/Flat Dark/Check round button.png",
+          "name": "gdevelop-asset-store"
+        }
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/Tick_Blue.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Tick_Blue.png",
+        "smoothed": true,
+        "userAdded": false,
+        "origin": {
+          "identifier": "https://resources.gdevelop-app.com/assets/Interface/Simple Wares Buttons/Tick_Blue.png",
+          "name": "gdevelop-asset-store"
+        }
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/Tick_Green.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Tick_Green.png",
+        "smoothed": true,
+        "userAdded": false,
+        "origin": {
+          "identifier": "https://resources.gdevelop-app.com/assets/Interface/Simple Wares Buttons/Tick_Green.png",
+          "name": "gdevelop-asset-store"
+        }
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/Tick_Grey.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Tick_Grey.png",
+        "smoothed": true,
+        "userAdded": false,
+        "origin": {
+          "identifier": "https://resources.gdevelop-app.com/assets/Interface/Simple Wares Buttons/Tick_Grey.png",
+          "name": "gdevelop-asset-store"
+        }
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/Tick_Red.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Tick_Red.png",
+        "smoothed": true,
+        "userAdded": false,
+        "origin": {
+          "identifier": "https://resources.gdevelop-app.com/assets/Interface/Simple Wares Buttons/Tick_Red.png",
+          "name": "gdevelop-asset-store"
+        }
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/Tick_Yellow.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Tick_Yellow.png",
+        "smoothed": true,
+        "userAdded": false,
+        "origin": {
+          "identifier": "https://resources.gdevelop-app.com/assets/Interface/Simple Wares Buttons/Tick_Yellow.png",
+          "name": "gdevelop-asset-store"
+        }
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "leaderboard.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "leaderboard.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "clipart2934974.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "clipart2934974.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "leaderboard2.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "leaderboard2.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "level.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "level.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "level2.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "level2.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "hisotry.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "hisotry.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "cog.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "cog.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "left-arrow.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "left-arrow.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "right-arrow.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "right-arrow.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "play.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "play.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "btc.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "btc.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "eth.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "eth.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "ada.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "ada.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "0-1-0.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "0-1-0.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "0-1-1.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "0-1-1.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "back_logo-1.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "back_logo-1.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "0-1-1-0.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "0-1-1-0.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "2-1.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "2-1.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "0-1.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "0-1.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "background.jpg",
+        "kind": "image",
+        "metadata": "",
+        "name": "background.jpg",
+        "smoothed": true,
+        "userAdded": true
+      }
+    ],
+    "resourceFolders": []
+  },
+  "objects": [],
+  "objectsGroups": [],
+  "variables": [
+    {
+      "name": "user",
+      "type": "structure",
+      "children": []
+    },
+    {
+      "name": "coins_info",
+      "type": "structure",
+      "children": []
+    },
+    {
+      "name": "selected_coin_index",
+      "type": "number",
+      "value": 0
+    }
+  ],
+  "layouts": [
+    {
+      "__REFERENCE_TO_SPLIT_OBJECT": true,
+      "referenceTo": "/layouts/loading"
+    },
+    {
+      "__REFERENCE_TO_SPLIT_OBJECT": true,
+      "referenceTo": "/layouts/home"
+    },
+    {
+      "__REFERENCE_TO_SPLIT_OBJECT": true,
+      "referenceTo": "/layouts/settings"
+    },
+    {
+      "__REFERENCE_TO_SPLIT_OBJECT": true,
+      "referenceTo": "/layouts/history"
+    },
+    {
+      "__REFERENCE_TO_SPLIT_OBJECT": true,
+      "referenceTo": "/layouts/leaderboard"
+    },
+    {
+      "__REFERENCE_TO_SPLIT_OBJECT": true,
+      "referenceTo": "/layouts/prediction"
+    }
+  ],
+  "externalEvents": [],
+  "eventsFunctionsExtensions": [
+    {
+      "__REFERENCE_TO_SPLIT_OBJECT": true,
+      "referenceTo": "/eventsFunctionsExtensions/timeformatter"
+    },
+    {
+      "__REFERENCE_TO_SPLIT_OBJECT": true,
+      "referenceTo": "/eventsFunctionsExtensions/textentryvirtualkeyboard"
+    },
+    {
+      "__REFERENCE_TO_SPLIT_OBJECT": true,
+      "referenceTo": "/eventsFunctionsExtensions/sanitizer"
+    },
+    {
+      "__REFERENCE_TO_SPLIT_OBJECT": true,
+      "referenceTo": "/eventsFunctionsExtensions/utils"
+    }
+  ],
+  "externalLayouts": [],
+  "externalSourceFiles": []
+}
