@@ -395,6 +395,28 @@
       ],
       "parameters": [],
       "objectGroups": []
+    },
+    {
+      "description": "Select Next Coin",
+      "fullName": "Select Next Coin",
+      "functionType": "Action",
+      "group": "",
+      "name": "select_next_coin",
+      "private": false,
+      "sentence": "Select Next Coin",
+      "events": [
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::JsCode",
+          "inlineCode": "const right_arrow_logo_name = \"right_arrow_logo\";\nconst current_coin_logo_name = \"current_coin_logo\";\nconst is_right_arrow_hovered = runtimeScene.getObjects(right_arrow_logo_name)[0].cursorOnObject(runtimeScene);\nconst selected_coin_index = runtimeScene.getGame().getVariables().get(\"selected_coin_index\").getAsNumber();\nconst coins_info = runtimeScene.getGame().getVariables().get(\"coins_info\").toJSObject();\nconst coins_names = Object.keys(coins_info);\nlet next_coin_index;\n\nif (is_right_arrow_hovered) {\n    next_coin_index = (selected_coin_index == 0) ? coins_names.length : selected_coin_index;\n    next_coin_index--;\n} else { // so `is_left_arrow_hovered` is hovered\n    next_coin_index = (selected_coin_index == coins_names.length - 1) ? -1 : selected_coin_index;\n    next_coin_index++;\n}\n\nruntimeScene.getGame().getVariables().get(\"selected_coin_index\").setNumber(next_coin_index);\nconst current_coin_logo = runtimeScene.getObjects(current_coin_logo_name)[0];\ncurrent_coin_logo.setAnimationName(coins_names[next_coin_index]);",
+          "parameterObjects": "",
+          "useStrict": true,
+          "eventsSheetExpanded": false
+        }
+      ],
+      "parameters": [],
+      "objectGroups": []
     }
   ],
   "eventsBasedBehaviors": []
