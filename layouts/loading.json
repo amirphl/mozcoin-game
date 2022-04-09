@@ -27,57 +27,12 @@
   "objectsGroups": [],
   "variables": [
     {
-      "name": "registeration_resp_str",
+      "name": "registeration_status",
       "type": "string",
       "value": ""
     },
     {
-      "name": "registeration_err_str",
-      "type": "string",
-      "value": ""
-    },
-    {
-      "name": "registeration_resp_json",
-      "type": "structure",
-      "children": []
-    },
-    {
-      "name": "registeration_err_json",
-      "type": "structure",
-      "children": []
-    },
-    {
-      "name": "login_resp_str",
-      "type": "string",
-      "value": ""
-    },
-    {
-      "name": "login_err_str",
-      "type": "string",
-      "value": ""
-    },
-    {
-      "name": "login_resp_json",
-      "type": "structure",
-      "children": []
-    },
-    {
-      "name": "login_err_json",
-      "type": "structure",
-      "children": []
-    },
-    {
-      "name": "coins_resp_str",
-      "type": "string",
-      "value": ""
-    },
-    {
-      "name": "coins_resp_json",
-      "type": "structure",
-      "children": []
-    },
-    {
-      "name": "coins_err_str",
+      "name": "login_status",
       "type": "string",
       "value": ""
     },
@@ -85,16 +40,6 @@
       "name": "user_str",
       "type": "string",
       "value": ""
-    },
-    {
-      "name": "user_json",
-      "type": "structure",
-      "children": []
-    },
-    {
-      "name": "do_change_scene",
-      "type": "boolean",
-      "value": false
     }
   ],
   "instances": [],
@@ -167,31 +112,136 @@
             {
               "type": {
                 "inverted": false,
-                "value": "JSONToVariableStructure"
+                "value": "JSONToGlobalVariableStructure"
               },
               "parameters": [
                 "VariableString(user_str)",
-                "user_json"
+                "user"
               ],
               "subInstructions": []
             },
             {
               "type": {
                 "inverted": false,
-                "value": "SendAsyncRequest"
+                "value": "Utils::login_user"
               },
               "parameters": [
-                "\"http://31.7.68.232/api/v1/users/\" + VariableString(user_json.uuid)+\n\"?token=\" +\nVariableString(user_json.token)",
-                "\"\"",
-                "\"GET\"",
-                "\"\"",
-                "login_resp_str",
-                "login_err_str"
+                "",
+                ""
               ],
               "subInstructions": []
             }
           ],
-          "events": []
+          "events": [
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Comment",
+              "color": {
+                "b": 109,
+                "g": 230,
+                "r": 255,
+                "textB": 0,
+                "textG": 0,
+                "textR": 0
+              },
+              "comment": "handle login success",
+              "comment2": ""
+            },
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "VarSceneTxt"
+                  },
+                  "parameters": [
+                    "login_status",
+                    "=",
+                    "\"OK\""
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "EcrireFichierTxt"
+                  },
+                  "parameters": [
+                    "\"player\"",
+                    "\"user\"",
+                    "GlobalVarToJSON(user)"
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "Utils::update_coins_list"
+                  },
+                  "parameters": [
+                    "",
+                    ""
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "Scene"
+                  },
+                  "parameters": [
+                    "",
+                    "\"home\"",
+                    ""
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "events": []
+            },
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Comment",
+              "color": {
+                "b": 109,
+                "g": 230,
+                "r": 255,
+                "textB": 0,
+                "textG": 0,
+                "textR": 0
+              },
+              "comment": "handle login failure",
+              "comment2": ""
+            },
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "VarSceneTxt"
+                  },
+                  "parameters": [
+                    "login_status",
+                    "!=",
+                    "\"OK\""
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "actions": [],
+              "events": []
+            }
+          ]
         },
         {
           "disabled": false,
@@ -229,324 +279,125 @@
             {
               "type": {
                 "inverted": false,
-                "value": "SendAsyncRequest"
-              },
-              "parameters": [
-                "\"http://31.7.68.232/api/v1/users/\"",
-                "\"\"",
-                "\"GET\"",
-                "\"\"",
-                "registeration_resp_str",
-                "registeration_err_str"
-              ],
-              "subInstructions": []
-            }
-          ],
-          "events": []
-        }
-      ]
-    },
-    {
-      "disabled": false,
-      "folded": false,
-      "type": "BuiltinCommonInstructions::Comment",
-      "color": {
-        "b": 109,
-        "g": 230,
-        "r": 255,
-        "textB": 0,
-        "textG": 0,
-        "textR": 0
-      },
-      "comment": "handle registeration failure",
-      "comment2": ""
-    },
-    {
-      "disabled": false,
-      "folded": false,
-      "type": "BuiltinCommonInstructions::Standard",
-      "conditions": [
-        {
-          "type": {
-            "inverted": false,
-            "value": "VarSceneTxt"
-          },
-          "parameters": [
-            "registeration_err_str",
-            "!=",
-            "\"\""
-          ],
-          "subInstructions": []
-        }
-      ],
-      "actions": [],
-      "events": []
-    },
-    {
-      "disabled": false,
-      "folded": false,
-      "type": "BuiltinCommonInstructions::Comment",
-      "color": {
-        "b": 109,
-        "g": 230,
-        "r": 255,
-        "textB": 0,
-        "textG": 0,
-        "textR": 0
-      },
-      "comment": "handle registeration success",
-      "comment2": ""
-    },
-    {
-      "disabled": false,
-      "folded": false,
-      "type": "BuiltinCommonInstructions::Standard",
-      "conditions": [
-        {
-          "type": {
-            "inverted": false,
-            "value": "VarSceneTxt"
-          },
-          "parameters": [
-            "registeration_resp_str",
-            "!=",
-            "\"\""
-          ],
-          "subInstructions": []
-        },
-        {
-          "type": {
-            "inverted": false,
-            "value": "VarSceneTxt"
-          },
-          "parameters": [
-            "registeration_resp_str",
-            "!=",
-            "\"0\""
-          ],
-          "subInstructions": []
-        }
-      ],
-      "actions": [
-        {
-          "type": {
-            "inverted": false,
-            "value": "JSONToGlobalVariableStructure"
-          },
-          "parameters": [
-            "VariableString(registeration_resp_str)",
-            "user"
-          ],
-          "subInstructions": []
-        },
-        {
-          "type": {
-            "inverted": false,
-            "value": "EcrireFichierTxt"
-          },
-          "parameters": [
-            "\"player\"",
-            "\"user\"",
-            "VariableString(registeration_resp_str)"
-          ],
-          "subInstructions": []
-        },
-        {
-          "type": {
-            "inverted": false,
-            "value": "SetSceneVariableAsBoolean"
-          },
-          "parameters": [
-            "do_change_scene",
-            "True"
-          ],
-          "subInstructions": []
-        }
-      ],
-      "events": []
-    },
-    {
-      "disabled": false,
-      "folded": false,
-      "type": "BuiltinCommonInstructions::Comment",
-      "color": {
-        "b": 109,
-        "g": 230,
-        "r": 255,
-        "textB": 0,
-        "textG": 0,
-        "textR": 0
-      },
-      "comment": "handle login failure",
-      "comment2": ""
-    },
-    {
-      "disabled": false,
-      "folded": false,
-      "type": "BuiltinCommonInstructions::Standard",
-      "conditions": [
-        {
-          "type": {
-            "inverted": false,
-            "value": "VarSceneTxt"
-          },
-          "parameters": [
-            "login_err_str",
-            "!=",
-            "\"\""
-          ],
-          "subInstructions": []
-        }
-      ],
-      "actions": [],
-      "events": []
-    },
-    {
-      "disabled": false,
-      "folded": false,
-      "type": "BuiltinCommonInstructions::Comment",
-      "color": {
-        "b": 109,
-        "g": 230,
-        "r": 255,
-        "textB": 0,
-        "textG": 0,
-        "textR": 0
-      },
-      "comment": "handle login success",
-      "comment2": ""
-    },
-    {
-      "disabled": false,
-      "folded": false,
-      "type": "BuiltinCommonInstructions::Standard",
-      "conditions": [
-        {
-          "type": {
-            "inverted": false,
-            "value": "VarSceneTxt"
-          },
-          "parameters": [
-            "login_resp_str",
-            "!=",
-            "\"\""
-          ],
-          "subInstructions": []
-        },
-        {
-          "type": {
-            "inverted": false,
-            "value": "VarSceneTxt"
-          },
-          "parameters": [
-            "login_resp_str",
-            "!=",
-            "\"0\""
-          ],
-          "subInstructions": []
-        }
-      ],
-      "actions": [
-        {
-          "type": {
-            "inverted": false,
-            "value": "JSONToGlobalVariableStructure"
-          },
-          "parameters": [
-            "VariableString(login_resp_str)",
-            "user"
-          ],
-          "subInstructions": []
-        },
-        {
-          "type": {
-            "inverted": false,
-            "value": "EcrireFichierTxt"
-          },
-          "parameters": [
-            "\"player\"",
-            "\"user\"",
-            "VariableString(login_resp_str)"
-          ],
-          "subInstructions": []
-        },
-        {
-          "type": {
-            "inverted": false,
-            "value": "SetSceneVariableAsBoolean"
-          },
-          "parameters": [
-            "do_change_scene",
-            "True"
-          ],
-          "subInstructions": []
-        }
-      ],
-      "events": []
-    },
-    {
-      "disabled": false,
-      "folded": false,
-      "type": "BuiltinCommonInstructions::Comment",
-      "color": {
-        "b": 109,
-        "g": 230,
-        "r": 255,
-        "textB": 0,
-        "textG": 0,
-        "textR": 0
-      },
-      "comment": "change scene",
-      "comment2": ""
-    },
-    {
-      "disabled": false,
-      "folded": false,
-      "type": "BuiltinCommonInstructions::Standard",
-      "conditions": [
-        {
-          "type": {
-            "inverted": false,
-            "value": "SceneVariableAsBoolean"
-          },
-          "parameters": [
-            "do_change_scene",
-            "True"
-          ],
-          "subInstructions": []
-        }
-      ],
-      "actions": [],
-      "events": [
-        {
-          "disabled": false,
-          "folded": false,
-          "type": "BuiltinCommonInstructions::JsCode",
-          "inlineCode": "const selected_coin_index = 0;\n\n// init global variable `selected_coin_index`\nruntimeScene.getGame().getVariables().get(\"selected_coin_index\").setNumber(selected_coin_index);\n\n// init global variable `coins_info`\nconst default_coins_info = {\n    'btc': {\n        'prediction_interval_sec': 600,\n        'timeframe_sec': 600\n    },\n    'eth': {\n        'prediction_interval_sec': 600,\n        'timeframe_sec': 600\n    },\n    'ada': {\n        'prediction_interval_sec': 600,\n        'timeframe_sec': 600\n    }\n};\nconst xhr = new XMLHttpRequest();\nxhr.open(\"GET\", \"http://31.7.68.232/api/v1/coins/\", true); // async\nxhr.onload = function (e) {\n    if (xhr.readyState === 4) {\n        if (xhr.status === 200) {\n            const coins_info = JSON.parse(xhr.responseText);\n            runtimeScene.getGame().getVariables().get(\"coins_info\").fromJSObject(coins_info);\n        } else {\n            console.error(\"failed to get coins info: \", xhr.statusText);\n            runtimeScene.getGame().getVariables().get(\"coins_info\").fromJSObject(default_coins_info);\n        }\n    }\n};\nxhr.onerror = function (e) {\n    console.error(\"failed to get coins info: \", xhr.statusText);\n    runtimeScene.getGame().getVariables().get(\"coins_info\").fromJSObject(default_coins_info);\n};\nxhr.send(null);",
-          "parameterObjects": "",
-          "useStrict": true,
-          "eventsSheetExpanded": false
-        },
-        {
-          "disabled": false,
-          "folded": false,
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [],
-          "actions": [
-            {
-              "type": {
-                "inverted": false,
-                "value": "Scene"
+                "value": "Utils::register_user"
               },
               "parameters": [
                 "",
-                "\"home\"",
                 ""
               ],
               "subInstructions": []
             }
           ],
-          "events": []
+          "events": [
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Comment",
+              "color": {
+                "b": 109,
+                "g": 230,
+                "r": 255,
+                "textB": 0,
+                "textG": 0,
+                "textR": 0
+              },
+              "comment": "handle registeration success",
+              "comment2": ""
+            },
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "VarSceneTxt"
+                  },
+                  "parameters": [
+                    "registeration_status",
+                    "=",
+                    "\"Created\""
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "EcrireFichierTxt"
+                  },
+                  "parameters": [
+                    "\"player\"",
+                    "\"user\"",
+                    "GlobalVarToJSON(user)"
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "Utils::update_coins_list"
+                  },
+                  "parameters": [
+                    "",
+                    ""
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "Scene"
+                  },
+                  "parameters": [
+                    "",
+                    "\"home\"",
+                    ""
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "events": []
+            },
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Comment",
+              "color": {
+                "b": 109,
+                "g": 230,
+                "r": 255,
+                "textB": 0,
+                "textG": 0,
+                "textR": 0
+              },
+              "comment": "handle registeration failure",
+              "comment2": ""
+            },
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "VarSceneTxt"
+                  },
+                  "parameters": [
+                    "registeration_status",
+                    "!=",
+                    "\"Created\""
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "actions": [],
+              "events": []
+            }
+          ]
         }
       ]
     }

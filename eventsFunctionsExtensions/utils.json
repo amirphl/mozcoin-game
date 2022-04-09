@@ -329,6 +329,72 @@
       ],
       "parameters": [],
       "objectGroups": []
+    },
+    {
+      "description": "Login User",
+      "fullName": "Login User",
+      "functionType": "Action",
+      "group": "",
+      "name": "login_user",
+      "private": false,
+      "sentence": "Login User",
+      "events": [
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::JsCode",
+          "inlineCode": "const user = runtimeScene.getGame().getVariables().get(\"user\").toJSObject();\nconst xhr = new XMLHttpRequest();\n\n// sync\n// TODO POST\nxhr.open(\"GET\", `http://31.7.68.232/api/v1/users/${user.uuid}`, false);\nxhr.setRequestHeader(\"Authorization\", user.token);\nxhr.onload = function (e) {\n    if (xhr.readyState === 4) {\n        if (xhr.status === 200) {\n            runtimeScene.getGame().getVariables().get(\"user\").fromJSON(xhr.responseText);\n        } else {\n            // TODO\n            console.error(\"login failed. status: \", xhr.statusText);\n        }\n        runtimeScene.getVariables().get(\"login_status\").setString(xhr.statusText);\n    }\n};\nxhr.onerror = function (e) {\n    // TODO\n    console.error(\"login failed. status: \", xhr.statusText);\n    runtimeScene.getVariables().get(\"login_status\").setString(xhr.statusText);\n};\nxhr.send(null);",
+          "parameterObjects": "",
+          "useStrict": true,
+          "eventsSheetExpanded": false
+        }
+      ],
+      "parameters": [],
+      "objectGroups": []
+    },
+    {
+      "description": "Register User",
+      "fullName": "Register User",
+      "functionType": "Action",
+      "group": "",
+      "name": "register_user",
+      "private": false,
+      "sentence": "Register User",
+      "events": [
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::JsCode",
+          "inlineCode": "const xhr = new XMLHttpRequest();\n\n// sync\n// TODO POST\nxhr.open(\"GET\", `http://31.7.68.232/api/v1/users/`, false);\nxhr.onload = function (e) {\n    if (xhr.readyState === 4) {\n        if (xhr.status === 201) {\n            runtimeScene.getGame().getVariables().get(\"user\").fromJSON(xhr.responseText);\n        } else {\n            // TODO\n            console.error(\"registeration failed. status: \", xhr.statusText);\n        }\n        runtimeScene.getVariables().get(\"registeration_status\").setString(xhr.statusText);\n    }\n};\nxhr.onerror = function (e) {\n    // TODO\n    console.error(\"registeration failed. status: \", xhr.statusText);\n    runtimeScene.getVariables().get(\"registeration_status\").setString(xhr.statusText);\n};\nxhr.send(null);",
+          "parameterObjects": "",
+          "useStrict": true,
+          "eventsSheetExpanded": false
+        }
+      ],
+      "parameters": [],
+      "objectGroups": []
+    },
+    {
+      "description": "Update Coins List",
+      "fullName": "Update Coins List",
+      "functionType": "Action",
+      "group": "",
+      "name": "update_coins_list",
+      "private": false,
+      "sentence": "Update Coins List",
+      "events": [
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::JsCode",
+          "inlineCode": "const selected_coin_index = 0;\nruntimeScene.getGame().getVariables().get(\"selected_coin_index\").setNumber(selected_coin_index);\n\nconst xhr = new XMLHttpRequest();\n// sync\nxhr.open(\"GET\", \"http://31.7.68.232/api/v1/coins/\", false);\nxhr.onload = function (e) {\n    if (xhr.readyState === 4) {\n        if (xhr.status === 200) {\n            runtimeScene.getGame().getVariables().get(\"coins_info\").fromJSON(xhr.responseText);\n        } else {\n            // TODO\n            console.error(\"failed to get coins list. status: \", xhr.statusText);\n        }\n    }\n};\nxhr.onerror = function (e) {\n    // TODO\n    console.error(\"failed to get coins list. status: \", xhr.statusText);\n};\nxhr.send(null);",
+          "parameterObjects": "",
+          "useStrict": true,
+          "eventsSheetExpanded": false
+        }
+      ],
+      "parameters": [],
+      "objectGroups": []
     }
   ],
   "eventsBasedBehaviors": []
