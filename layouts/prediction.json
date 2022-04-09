@@ -491,16 +491,16 @@
       "behaviors": [],
       "animations": [
         {
-          "name": "",
+          "name": "0",
           "useMultipleDirections": false,
           "directions": [
             {
               "looping": false,
-              "timeBetweenFrames": 0.08,
+              "timeBetweenFrames": 0.07999999821186066,
               "sprites": [
                 {
                   "hasCustomCollisionMask": false,
-                  "image": "background.jpg",
+                  "image": "0-1-0.png",
                   "points": [],
                   "originPoint": {
                     "name": "origine",
