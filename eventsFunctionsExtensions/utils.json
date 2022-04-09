@@ -170,7 +170,7 @@
           "disabled": false,
           "folded": false,
           "type": "BuiltinCommonInstructions::JsCode",
-          "inlineCode": "const selected_coin_index = runtimeScene.getGame().getVariables().get(\"selected_coin_index\").getAsNumber();\nconst coins_info = runtimeScene.getGame().getVariables().get(\"coins_info\");\nconst coins_names = Object.keys(coins_info.getAllChildren());\nconst selected_coin_name = coins_names[selected_coin_index];\n\nconst xhr = new XMLHttpRequest();\n// sync\nxhr.open(\"GET\", `http://31.7.68.232/api/v1/coins/${selected_coin_name}`, false);\nxhr.onload = function (e) {\n    if (xhr.readyState === 4) {\n        if (xhr.status === 200) {\n            runtimeScene.getVariables().get(\"data\").setString(xhr.responseText);\n        } else {\n            // TODO\n            console.error(`failed to get \"${selected_coin_name}\" prediction info`, xhr.statusText);\n        }\n    }\n};\nxhr.onerror = function (e) {\n    // TODO\n    console.error(`failed to get \"${selected_coin_name}\" prediction info`, xhr.statusText);\n};\nxhr.send(null);",
+          "inlineCode": "const selected_coin_index = runtimeScene.getGame().getVariables().get(\"selected_coin_index\").getAsNumber();\nconst coins_info = runtimeScene.getGame().getVariables().get(\"coins_info\").toJSObject();\nconst coins_names = Object.keys(coins_info);\nconst selected_coin_name = coins_names[selected_coin_index];\n\nconst xhr = new XMLHttpRequest();\n// sync\nxhr.open(\"GET\", `http://31.7.68.232/api/v1/coins/${selected_coin_name}`, false);\nxhr.onload = function (e) {\n    if (xhr.readyState === 4) {\n        if (xhr.status === 200) {\n            runtimeScene.getVariables().get(\"data\").setString(xhr.responseText);\n        } else {\n            // TODO\n            console.error(`failed to get \"${selected_coin_name}\" prediction info. status: `, xhr.statusText);\n        }\n    }\n};\nxhr.onerror = function (e) {\n    // TODO\n    console.error(`failed to get \"${selected_coin_name}\" prediction info. status: `, xhr.statusText);\n};\nxhr.send(null);",
           "parameterObjects": "",
           "useStrict": true,
           "eventsSheetExpanded": false
@@ -186,19 +186,30 @@
       "group": "",
       "name": "submit_pred",
       "private": false,
-      "sentence": "Submit Prediction",
+      "sentence": "Submit Prediction _PARAM1_",
       "events": [
         {
           "disabled": false,
           "folded": false,
           "type": "BuiltinCommonInstructions::JsCode",
-          "inlineCode": "",
+          "inlineCode": "const user = runtimeScene.getGame().getVariables().get(\"user\").toJSObject();\nconst selected_coin_index = runtimeScene.getGame().getVariables().get(\"selected_coin_index\").getAsNumber();\nconst coins_info = runtimeScene.getGame().getVariables().get(\"coins_info\").toJSObject();\nconst coins_names = Object.keys(coins_info);\nconst selected_coin_name = coins_names[selected_coin_index];\n\nconst data = JSON.parse(eventsFunctionContext.getArgument(\"data\"));\n\nconst branch_num_mozcoins_txt_name = \"branch_num_mozcoins_txt\";\nconst branch_txts = runtimeScene.getObjects(branch_num_mozcoins_txt_name);\nconst branch_num_mozcoins_capture_name = \"branch_num_mozcoins_capture\";\nconst branch_captures = runtimeScene.getObjects(branch_num_mozcoins_capture_name);\n\n\nfunction constrcut_payload() {\n    const payload = {\n        \"m\": data.m,\n        \"n\": data.n\n    };\n\n    const d = {};\n    let c = 0;\n\n    for(let key of Object.keys(data.branches)) {\n        d[data.branches[key]] = branch_txts[c].getString();\n        c++;\n    }\n\n    payload[\"branches\"] = d;\n    return payload;\n}\n\nconst xhr = new XMLHttpRequest();\n// sync\n// TODO POST\nxhr.open(\"GET\", `http://31.7.68.232/api/v1/coins/${selected_coin_name}/predictions/`, false);\nxhr.setRequestHeader(\"Authorization\", user.token);\nxhr.setRequestHeader(\"Content-Type\", \"application/json;charset=UTF-8\");\nxhr.onload = function (e) {\n    if (xhr.readyState === 4) {\n        if (xhr.status === 201) {\n            // TODO\n            for(let txt of branch_txts) {\n                txt.setString(\"\")\n            }\n\n            for (let capture of branch_captures) {\n                capture.setString(\"\");\n            }\n        } else {\n            // TODO\n            console.error(`failed to submit prediction for \"${selected_coin_name}\". status: `, xhr.statusText);\n        }\n\n        runtimeScene.getVariables().get(\"submit_status\").setString(xhr.statusText);\n    }\n};\nxhr.onerror = function (e) {\n    // TODO\n    console.error(`failed to submit prediction for \"${selected_coin_name}\". status: `, xhr.statusText);\n    runtimeScene.getVariables().get(\"submit_status\").setString(xhr.statusText);\n};\n\nxhr.send(JSON.stringify(constrcut_payload()));",
           "parameterObjects": "",
           "useStrict": true,
           "eventsSheetExpanded": false
         }
       ],
-      "parameters": [],
+      "parameters": [
+        {
+          "codeOnly": false,
+          "defaultValue": "",
+          "description": "data",
+          "longDescription": "",
+          "name": "data",
+          "optional": false,
+          "supplementaryInformation": "",
+          "type": "string"
+        }
+      ],
       "objectGroups": []
     },
     {
@@ -366,6 +377,28 @@
           "folded": false,
           "type": "BuiltinCommonInstructions::JsCode",
           "inlineCode": "const xhr = new XMLHttpRequest();\n\n// sync\n// TODO POST\nxhr.open(\"GET\", `http://31.7.68.232/api/v1/users/`, false);\nxhr.onload = function (e) {\n    if (xhr.readyState === 4) {\n        if (xhr.status === 201) {\n            runtimeScene.getGame().getVariables().get(\"user\").fromJSON(xhr.responseText);\n        } else {\n            // TODO\n            console.error(\"registeration failed. status: \", xhr.statusText);\n        }\n        runtimeScene.getVariables().get(\"registeration_status\").setString(xhr.statusText);\n    }\n};\nxhr.onerror = function (e) {\n    // TODO\n    console.error(\"registeration failed. status: \", xhr.statusText);\n    runtimeScene.getVariables().get(\"registeration_status\").setString(xhr.statusText);\n};\nxhr.send(null);",
+          "parameterObjects": "",
+          "useStrict": true,
+          "eventsSheetExpanded": false
+        }
+      ],
+      "parameters": [],
+      "objectGroups": []
+    },
+    {
+      "description": "Update User",
+      "fullName": "Update User",
+      "functionType": "Action",
+      "group": "",
+      "name": "update_user",
+      "private": false,
+      "sentence": "Update User",
+      "events": [
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::JsCode",
+          "inlineCode": "const user = runtimeScene.getGame().getVariables().get(\"user\").toJSObject();\nconst xhr = new XMLHttpRequest();\n\n// sync\nxhr.open(\"GET\", `http://31.7.68.232/api/v1/users/${user.uuid}`, false);\nxhr.setRequestHeader(\"Authorization\", user.token);\nxhr.onload = function (e) {\n    if (xhr.readyState === 4) {\n        if (xhr.status === 200) {\n            runtimeScene.getGame().getVariables().get(\"user\").fromJSON(xhr.responseText);\n        } else {\n            // TODO\n            console.error(\"failed to get user info. status: \", xhr.statusText);\n        }\n    }\n};\nxhr.onerror = function (e) {\n    // TODO\n    console.error(\"failed to get user info. status: \", xhr.statusText);\n};\nxhr.send(null);",
           "parameterObjects": "",
           "useStrict": true,
           "eventsSheetExpanded": false

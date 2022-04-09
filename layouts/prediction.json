@@ -40,6 +40,11 @@
       "name": "counter",
       "type": "number",
       "value": 0
+    },
+    {
+      "name": "submit_status",
+      "type": "string",
+      "value": ""
     }
   ],
   "instances": [
@@ -52,8 +57,8 @@
       "name": "timer_txt",
       "persistentUuid": "8c89d584-8c0f-40e5-90b5-fe0a9e5af862",
       "width": 0,
-      "x": 50,
-      "y": 167,
+      "x": 79,
+      "y": 183,
       "zOrder": 2,
       "numberProperties": [],
       "stringProperties": [],
@@ -1118,8 +1123,55 @@
           "subInstructions": []
         }
       ],
-      "actions": [],
-      "events": []
+      "actions": [
+        {
+          "type": {
+            "inverted": false,
+            "value": "Utils::submit_pred"
+          },
+          "parameters": [
+            "",
+            "VariableString(data)",
+            ""
+          ],
+          "subInstructions": []
+        }
+      ],
+      "events": [
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "VarSceneTxt"
+              },
+              "parameters": [
+                "submit_status",
+                "=",
+                "\"Created\""
+              ],
+              "subInstructions": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "Utils::update_user"
+              },
+              "parameters": [
+                "",
+                ""
+              ],
+              "subInstructions": []
+            }
+          ],
+          "events": []
+        }
+      ]
     },
     {
       "disabled": false,
