@@ -50,7 +50,7 @@
       {
         "extension": "Firebase",
         "property": "FirebaseConfig",
-        "value": "{\n  \"apiKey\": \"AIzaSyDeG6cNdHf1TRHeSvi6yhR83E5Ti0HQrUg\",\n  \"authDomain\": \"mozcoingame-72b2c.firebaseapp.com\",\n  \"projectId\": \"mozcoingame-72b2c\",\n  \"storageBucket\": \"mozcoingame-72b2c.appspot.com\",\n  \"messagingSenderId\": \"499296654560\",\n  \"appId\": \"1:499296654560:web:575611ec4592765b4c6c85\"\n}"
+        "value": ""
       }
     ],
     "platforms": [
