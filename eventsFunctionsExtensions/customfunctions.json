@@ -1,0 +1,148 @@
+{
+  "author": "",
+  "category": "",
+  "description": "",
+  "extensionNamespace": "",
+  "fullName": "",
+  "helpPath": "",
+  "iconUrl": "",
+  "name": "CustomFunctions",
+  "previewIconUrl": "",
+  "shortDescription": "",
+  "version": "",
+  "tags": [],
+  "authorIds": [],
+  "dependencies": [],
+  "eventsFunctions": [
+    {
+      "description": "create branches based on a json describing the branches and their intervals",
+      "fullName": "Create Branches",
+      "functionType": "Action",
+      "group": "",
+      "name": "create_branches",
+      "private": false,
+      "sentence": "create branches based on _PARAM1_",
+      "events": [
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [],
+          "actions": [],
+          "events": []
+        },
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::JsCode",
+          "inlineCode": "const branches_str = eventsFunctionContext.getArgument(\"branches\");\nconst branches = JSON.parse(branches_str);\nconst num = Object.keys(branches).length;\n\nif (num === 0)\n    return;\n\nconst resolution_width = runtimeScene.getGame().getGameResolutionWidth();\nconst resolution_height = runtimeScene.getGame().getGameResolutionHeight();\nconst branch_width = 100;\nconst branch_height = 50;\nconst x_offset = 50;\nconst y_offset = 150;\nconst y_gap = (resolution_height - y_offset) / num;\nconst branch_logo_name = \"branch_logo\";\n\nlet counter = 0;\nObject.entries(branches).forEach((b) => {\n    const [_, value] = b;\n    \n    // create new branch\n    const new_branch = runtimeScene.createObject(branch_logo_name);\n    new_branch.setHeight(branch_height);\n    new_branch.setWidth(branch_width);\n    new_branch.setX(resolution_width - branch_width - x_offset);\n    new_branch.setY(y_offset + branch_height + counter * y_gap);\n\n    // create input capture\n    const new_branch_num_mozcoins_capture = runtimeScene.createObject(\"branch_num_mozcoins_txt\");\n\n    counter++;\n});",
+          "parameterObjects": "",
+          "useStrict": true,
+          "eventsSheetExpanded": false
+        }
+      ],
+      "parameters": [
+        {
+          "codeOnly": false,
+          "defaultValue": "",
+          "description": "Enter a Stringified JSON",
+          "longDescription": "",
+          "name": "branches",
+          "optional": false,
+          "supplementaryInformation": "",
+          "type": "string"
+        }
+      ],
+      "objectGroups": []
+    },
+    {
+      "description": "update time",
+      "fullName": "Update Time",
+      "functionType": "Action",
+      "group": "",
+      "name": "update_time_txt",
+      "private": false,
+      "sentence": "update time",
+      "events": [
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::JsCode",
+          "inlineCode": "const timer_txt = runtimeScene.getObjects(\"timer_txt\")[0];\n\neventsFunctionContext.\n\nfunction update_timer_txt() {\n    const date = new Date();\n    const hour = date.getUTCHours();\n    const minute = date.getUTCMinutes();\n    const second = date.getUTCSeconds();\n    const txt = `${hour}:${minute}:${second}`;\n    timer_txt.setString(txt);\n}\n\nupdate_timer_txt();",
+          "parameterObjects": "",
+          "useStrict": true,
+          "eventsSheetExpanded": false
+        }
+      ],
+      "parameters": [],
+      "objectGroups": []
+    },
+    {
+      "description": "Update Prediction Interval",
+      "fullName": "Update Prediction Interval",
+      "functionType": "Action",
+      "group": "",
+      "name": "update_pred_interval_txt",
+      "private": false,
+      "sentence": "Update Prediction Interval",
+      "events": [
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::JsCode",
+          "inlineCode": "const pred_interval_txt = runtimeScene.getObjects(\"pred_interval_txt\")[0];\nconst pred_interval_min = Math.floor(runtimeScene.getVariables().get(\"pred_interval_min\").getAsNumber());\n\nfunction update_pred_interval_txt() {\n    const date = new Date();\n    const hour = date.getUTCHours();\n    const start_hour = hour;\n    let end_hour = hour;\n    const minute = date.getUTCMinutes();\n    const start_min = Math.floor(minute / pred_interval_min) * pred_interval_min;\n    const end_min = start_min + pred_interval_min;\n\n    if (end_min >= 60) {\n        end_min -= 60;\n        end_hour += 1;\n    }\n\n    let txt = `${start_hour}:${start_min}:00 - ${end_hour}:${end_min}:00`;\n    pred_interval_txt.setString(txt);\n}\n\nupdate_pred_interval_txt();",
+          "parameterObjects": "",
+          "useStrict": true,
+          "eventsSheetExpanded": false
+        }
+      ],
+      "parameters": [],
+      "objectGroups": []
+    },
+    {
+      "description": "Update Evaluation Interval",
+      "fullName": "Update Evaluation Interval",
+      "functionType": "Action",
+      "group": "",
+      "name": "udpate_eval_interval_txt",
+      "private": false,
+      "sentence": "Update Evaluation Interval",
+      "events": [
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::JsCode",
+          "inlineCode": "const pred_interval_txt = runtimeScene.getObjects(\"pred_interval_txt\")[0];\nconst eval_interval_txt = runtimeScene.getObjects(\"eval_interval_txt\")[0];\nconst num_mozcoins_txt = runtimeScene.getObjects(\"num_mozcoins_txt\")[0];\nconst pred_interval_min = Math.floor(runtimeScene.getVariables().get(\"pred_interval_min\").getAsNumber());\nconst eval_interval_min = Math.floor(runtimeScene.getVariables().get(\"eval_interval_min\").getAsNumber());\n\nfunction update_pred_eval_interval_txt() {\n    const date = new Date();\n    const hour = date.getUTCHours();\n    const start_hour = hour;\n    let end_hour = hour;\n    const minute = date.getUTCMinutes();\n    const start_min = Math.floor(minute / pred_interval_min) * pred_interval_min;\n    const end_min = start_min + pred_interval_min;\n \n    // TODO test this\n    if (end_min >= 60) {\n        end_min -= 60;\n        end_hour += 1;\n    }\n\n    let txt = `${start_hour}:${start_min}:00 - ${end_hour}:${end_min}:00`;\n    pred_interval_txt.setString(txt);\n\n    let eval_hour = start_hour;\n    let eval_min = start_min + eval_interval_min;\n\n    if (eval_min >= 60) {\n        eval_min -= 60;\n        eval_hour += 1;\n    }\n\n    txt = `${eval_hour}:${eval_min}:00`;\n    eval_interval_txt.setString(txt);\n}\n\nfunction update_num_mozcoins_txt() {\n    const user = runtimeScene.getGame().getVariables().get(\"user\");\n    const num_mozcoins = user.getChild(\"num_mozcoins\");\n    num_mozcoins_txt.setString(num_mozcoins.getAsString());\n}\n\nupdate_pred_eval_interval_txt();\nupdate_num_mozcoins_txt();",
+          "parameterObjects": "",
+          "useStrict": true,
+          "eventsSheetExpanded": false
+        }
+      ],
+      "parameters": [],
+      "objectGroups": []
+    },
+    {
+      "description": "a",
+      "fullName": "Update Num Mozcoin",
+      "functionType": "Action",
+      "group": "",
+      "name": "update_num_mozcoins_txt",
+      "private": false,
+      "sentence": "a",
+      "events": [
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::JsCode",
+          "inlineCode": "const num_mozcoins_txt = runtimeScene.getObjects(\"num_mozcoins_txt\")[0];\n\nfunction update_num_mozcoins_txt() {\n    const user = runtimeScene.getGame().getVariables().get(\"user\");\n    const num_mozcoins = user.getChild(\"num_mozcoins\");\n    num_mozcoins_txt.setString(num_mozcoins.getAsString());\n}\n\nupdate_num_mozcoins_txt();",
+          "parameterObjects": "",
+          "useStrict": true,
+          "eventsSheetExpanded": false
+        }
+      ],
+      "parameters": [],
+      "objectGroups": []
+    }
+  ],
+  "eventsBasedBehaviors": []
+}
