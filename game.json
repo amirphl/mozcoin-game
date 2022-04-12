@@ -735,7 +735,7 @@
       "children": []
     },
     {
-      "name": "coins_info",
+      "name": "coins",
       "type": "structure",
       "children": []
     },
@@ -743,6 +743,11 @@
       "name": "selected_coin_index",
       "type": "number",
       "value": 0
+    },
+    {
+      "name": "domain",
+      "type": "string",
+      "value": ""
     }
   ],
   "layouts": [

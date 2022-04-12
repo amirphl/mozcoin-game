@@ -241,7 +241,7 @@
       "behaviors": [],
       "animations": [
         {
-          "name": "",
+          "name": "0",
           "useMultipleDirections": false,
           "directions": [
             {
@@ -301,7 +301,7 @@
       "behaviors": [],
       "animations": [
         {
-          "name": "",
+          "name": "0",
           "useMultipleDirections": false,
           "directions": [
             {
@@ -361,7 +361,7 @@
       "behaviors": [],
       "animations": [
         {
-          "name": "",
+          "name": "0",
           "useMultipleDirections": false,
           "directions": [
             {
@@ -401,7 +401,7 @@
       "behaviors": [],
       "animations": [
         {
-          "name": "",
+          "name": "0",
           "useMultipleDirections": false,
           "directions": [
             {
@@ -441,7 +441,7 @@
       "behaviors": [],
       "animations": [
         {
-          "name": "",
+          "name": "0",
           "useMultipleDirections": false,
           "directions": [
             {
@@ -501,7 +501,7 @@
       "behaviors": [],
       "animations": [
         {
-          "name": "",
+          "name": "0",
           "useMultipleDirections": false,
           "directions": [
             {
@@ -541,7 +541,7 @@
       "behaviors": [],
       "animations": [
         {
-          "name": "",
+          "name": "0",
           "useMultipleDirections": false,
           "directions": [
             {
@@ -581,7 +581,7 @@
       "behaviors": [],
       "animations": [
         {
-          "name": "",
+          "name": "0",
           "useMultipleDirections": false,
           "directions": [
             {
@@ -621,7 +621,7 @@
       "behaviors": [],
       "animations": [
         {
-          "name": "eth",
+          "name": "btc",
           "useMultipleDirections": false,
           "directions": [
             {
@@ -630,7 +630,7 @@
               "sprites": [
                 {
                   "hasCustomCollisionMask": false,
-                  "image": "eth.png",
+                  "image": "btc.png",
                   "points": [],
                   "originPoint": {
                     "name": "origine",
@@ -650,7 +650,7 @@
           ]
         },
         {
-          "name": "btc",
+          "name": "eth",
           "useMultipleDirections": false,
           "directions": [
             {
@@ -659,7 +659,7 @@
               "sprites": [
                 {
                   "hasCustomCollisionMask": false,
-                  "image": "btc.png",
+                  "image": "eth.png",
                   "points": [],
                   "originPoint": {
                     "name": "origine",
@@ -846,6 +846,14 @@
             "Left"
           ],
           "subInstructions": []
+        },
+        {
+          "type": {
+            "inverted": false,
+            "value": "BuiltinCommonInstructions::Once"
+          },
+          "parameters": [],
+          "subInstructions": []
         }
       ],
       "actions": [
@@ -906,6 +914,14 @@
             "",
             "Left"
           ],
+          "subInstructions": []
+        },
+        {
+          "type": {
+            "inverted": false,
+            "value": "BuiltinCommonInstructions::Once"
+          },
+          "parameters": [],
           "subInstructions": []
         }
       ],
@@ -968,6 +984,14 @@
             "Left"
           ],
           "subInstructions": []
+        },
+        {
+          "type": {
+            "inverted": false,
+            "value": "BuiltinCommonInstructions::Once"
+          },
+          "parameters": [],
+          "subInstructions": []
         }
       ],
       "actions": [
@@ -1028,6 +1052,14 @@
             "",
             "Left"
           ],
+          "subInstructions": []
+        },
+        {
+          "type": {
+            "inverted": false,
+            "value": "BuiltinCommonInstructions::Once"
+          },
+          "parameters": [],
           "subInstructions": []
         }
       ],
@@ -1090,6 +1122,14 @@
             "Left"
           ],
           "subInstructions": []
+        },
+        {
+          "type": {
+            "inverted": false,
+            "value": "BuiltinCommonInstructions::Once"
+          },
+          "parameters": [],
+          "subInstructions": []
         }
       ],
       "actions": [],
@@ -1137,6 +1177,14 @@
             "",
             "Left"
           ],
+          "subInstructions": []
+        },
+        {
+          "type": {
+            "inverted": false,
+            "value": "BuiltinCommonInstructions::Once"
+          },
+          "parameters": [],
           "subInstructions": []
         }
       ],
@@ -1200,14 +1248,6 @@
                     "Left"
                   ],
                   "subInstructions": []
-                },
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "BuiltinCommonInstructions::Once"
-                  },
-                  "parameters": [],
-                  "subInstructions": []
                 }
               ]
             },
@@ -1241,18 +1281,18 @@
                     "Left"
                   ],
                   "subInstructions": []
-                },
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "BuiltinCommonInstructions::Once"
-                  },
-                  "parameters": [],
-                  "subInstructions": []
                 }
               ]
             }
           ]
+        },
+        {
+          "type": {
+            "inverted": false,
+            "value": "BuiltinCommonInstructions::Once"
+          },
+          "parameters": [],
+          "subInstructions": []
         }
       ],
       "actions": [
