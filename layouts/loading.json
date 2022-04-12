@@ -61,7 +61,20 @@
           "subInstructions": []
         }
       ],
-      "actions": [],
+      "actions": [
+        {
+          "type": {
+            "inverted": false,
+            "value": "ModVarGlobalTxt"
+          },
+          "parameters": [
+            "domain",
+            "=",
+            "\"http://localhost:8000\""
+          ],
+          "subInstructions": []
+        }
+      ],
       "events": [
         {
           "disabled": false,
