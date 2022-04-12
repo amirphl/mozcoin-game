@@ -536,7 +536,7 @@
       "behaviors": [],
       "animations": [
         {
-          "name": "back_logo",
+          "name": "0",
           "useMultipleDirections": false,
           "directions": [
             {
@@ -611,18 +611,6 @@
         {
           "type": {
             "inverted": false,
-            "value": "ModVarScene"
-          },
-          "parameters": [
-            "remaining_pred_sec",
-            "=",
-            "Utils::get_remaining_pred_time(VariableString(data))"
-          ],
-          "subInstructions": []
-        },
-        {
-          "type": {
-            "inverted": false,
             "value": "Utils::create_branches"
           },
           "parameters": [
@@ -664,19 +652,7 @@
           "parameters": [
             "remaining_pred_sec_txt",
             "=",
-            "ToString(Variable(remaining_pred_sec))"
-          ],
-          "subInstructions": []
-        },
-        {
-          "type": {
-            "inverted": false,
-            "value": "ModVarScene"
-          },
-          "parameters": [
-            "remaining_pred_sec",
-            "-",
-            "1"
+            "ToString(Variable(counter))"
           ],
           "subInstructions": []
         },
@@ -803,19 +779,7 @@
           "parameters": [
             "remaining_pred_sec_txt",
             "=",
-            "ToString(Variable(remaining_pred_sec))"
-          ],
-          "subInstructions": []
-        },
-        {
-          "type": {
-            "inverted": false,
-            "value": "ModVarScene"
-          },
-          "parameters": [
-            "remaining_pred_sec",
-            "-",
-            "1"
+            "ToString(Variable(counter))"
           ],
           "subInstructions": []
         }
@@ -851,7 +815,7 @@
             "",
             "\"1\"",
             ">",
-            "60"
+            "1"
           ],
           "subInstructions": []
         },
@@ -929,18 +893,6 @@
                 "counter",
                 "=",
                 "Utils::get_counter(VariableString(data))"
-              ],
-              "subInstructions": []
-            },
-            {
-              "type": {
-                "inverted": false,
-                "value": "ModVarScene"
-              },
-              "parameters": [
-                "remaining_pred_sec",
-                "=",
-                "Utils::get_remaining_pred_time(VariableString(data))"
               ],
               "subInstructions": []
             },
@@ -1060,6 +1012,14 @@
             ""
           ],
           "subInstructions": []
+        },
+        {
+          "type": {
+            "inverted": false,
+            "value": "BuiltinCommonInstructions::Once"
+          },
+          "parameters": [],
+          "subInstructions": []
         }
       ],
       "actions": [
@@ -1120,6 +1080,14 @@
             "",
             ""
           ],
+          "subInstructions": []
+        },
+        {
+          "type": {
+            "inverted": false,
+            "value": "BuiltinCommonInstructions::Once"
+          },
+          "parameters": [],
           "subInstructions": []
         }
       ],
