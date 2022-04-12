@@ -50,15 +50,111 @@
   "instances": [
     {
       "angle": 0,
-      "customSize": false,
-      "height": 0,
+      "customSize": true,
+      "height": 50,
       "layer": "",
       "locked": false,
       "name": "timer_txt",
       "persistentUuid": "8c89d584-8c0f-40e5-90b5-fe0a9e5af862",
-      "width": 0,
-      "x": 79,
-      "y": 183,
+      "width": 200,
+      "x": 115,
+      "y": 200,
+      "zOrder": 1,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "height": 100,
+      "layer": "",
+      "locked": false,
+      "name": "timer_logo",
+      "persistentUuid": "bac32bcf-182f-4800-aab1-7a1aee7dedbf",
+      "width": 150,
+      "x": 100,
+      "y": 50,
+      "zOrder": 1,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "height": 50,
+      "layer": "",
+      "locked": false,
+      "name": "remaining_pred_sec_txt",
+      "persistentUuid": "3758059c-9de9-484a-8f6b-5a522ef9e8d0",
+      "width": 50,
+      "x": 435,
+      "y": 200,
+      "zOrder": 1,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "height": 100,
+      "layer": "",
+      "locked": false,
+      "name": "remaining_pred_sec_logo",
+      "persistentUuid": "bc2dbcab-b90e-4b16-a1bb-9f46a7cc95fc",
+      "width": 100,
+      "x": 400,
+      "y": 50,
+      "zOrder": 1,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "height": 50,
+      "layer": "",
+      "locked": false,
+      "name": "eval_time_txt",
+      "persistentUuid": "2b64a225-d171-477c-9776-9092ed577a22",
+      "width": 200,
+      "x": 700,
+      "y": 200,
+      "zOrder": 1,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "height": 100,
+      "layer": "",
+      "locked": false,
+      "name": "eval_time_logo",
+      "persistentUuid": "cf2859bb-736c-45dd-933e-91a450e748d3",
+      "width": 100,
+      "x": 700,
+      "y": 50,
+      "zOrder": 1,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "height": 100,
+      "layer": "",
+      "locked": false,
+      "name": "mozcoins_basket_logo",
+      "persistentUuid": "1397dc13-bd6f-463d-aec5-612127dd59c0",
+      "width": 150,
+      "x": 1000,
+      "y": 50,
       "zOrder": 2,
       "numberProperties": [],
       "stringProperties": [],
@@ -67,111 +163,15 @@
     {
       "angle": 0,
       "customSize": false,
-      "height": 0,
-      "layer": "",
-      "locked": false,
-      "name": "timer_logo",
-      "persistentUuid": "bac32bcf-182f-4800-aab1-7a1aee7dedbf",
-      "width": 0,
-      "x": 76,
-      "y": 68,
-      "zOrder": 6,
-      "numberProperties": [],
-      "stringProperties": [],
-      "initialVariables": []
-    },
-    {
-      "angle": 0,
-      "customSize": false,
-      "height": 0,
-      "layer": "",
-      "locked": false,
-      "name": "remaining_pred_sec_txt",
-      "persistentUuid": "3758059c-9de9-484a-8f6b-5a522ef9e8d0",
-      "width": 0,
-      "x": 221,
-      "y": 186,
-      "zOrder": 7,
-      "numberProperties": [],
-      "stringProperties": [],
-      "initialVariables": []
-    },
-    {
-      "angle": 0,
-      "customSize": false,
-      "height": 0,
-      "layer": "",
-      "locked": false,
-      "name": "remaining_pred_sec_logo",
-      "persistentUuid": "bc2dbcab-b90e-4b16-a1bb-9f46a7cc95fc",
-      "width": 0,
-      "x": 255,
-      "y": 72,
-      "zOrder": 8,
-      "numberProperties": [],
-      "stringProperties": [],
-      "initialVariables": []
-    },
-    {
-      "angle": 0,
-      "customSize": false,
-      "height": 0,
-      "layer": "",
-      "locked": false,
-      "name": "eval_time_txt",
-      "persistentUuid": "2b64a225-d171-477c-9776-9092ed577a22",
-      "width": 0,
-      "x": 498,
-      "y": 184,
-      "zOrder": 9,
-      "numberProperties": [],
-      "stringProperties": [],
-      "initialVariables": []
-    },
-    {
-      "angle": 0,
-      "customSize": false,
-      "height": 0,
-      "layer": "",
-      "locked": false,
-      "name": "eval_time_logo",
-      "persistentUuid": "cf2859bb-736c-45dd-933e-91a450e748d3",
-      "width": 0,
-      "x": 432,
-      "y": 67,
-      "zOrder": 10,
-      "numberProperties": [],
-      "stringProperties": [],
-      "initialVariables": []
-    },
-    {
-      "angle": 0,
-      "customSize": false,
-      "height": 0,
-      "layer": "",
-      "locked": false,
-      "name": "mozcoins_basket_logo",
-      "persistentUuid": "1397dc13-bd6f-463d-aec5-612127dd59c0",
-      "width": 0,
-      "x": 677,
-      "y": 35,
-      "zOrder": 11,
-      "numberProperties": [],
-      "stringProperties": [],
-      "initialVariables": []
-    },
-    {
-      "angle": 0,
-      "customSize": false,
-      "height": 0,
+      "height": 50,
       "layer": "",
       "locked": false,
       "name": "num_mozcoins_txt",
       "persistentUuid": "97a2376d-c63b-4320-a224-7fc44a58d141",
-      "width": 0,
-      "x": 742,
-      "y": 189,
-      "zOrder": 12,
+      "width": 100,
+      "x": 1060,
+      "y": 150,
+      "zOrder": 1,
       "numberProperties": [],
       "stringProperties": [],
       "initialVariables": []
@@ -179,31 +179,63 @@
     {
       "angle": 0,
       "customSize": true,
-      "height": 65,
+      "height": 125,
       "layer": "",
       "locked": false,
       "name": "submit_logo",
       "persistentUuid": "9d7a4a75-4741-43b6-8ba3-50132d4852b3",
-      "width": 84,
-      "x": 1367,
-      "y": 952,
-      "zOrder": 17,
+      "width": 125,
+      "x": 1400,
+      "y": 50,
+      "zOrder": 1,
       "numberProperties": [],
       "stringProperties": [],
       "initialVariables": []
     },
     {
       "angle": 0,
-      "customSize": false,
-      "height": 0,
+      "customSize": true,
+      "height": 100,
       "layer": "",
       "locked": false,
       "name": "back_logo",
       "persistentUuid": "aa95611b-ee14-4d61-b030-1f1ba2a55935",
-      "width": 0,
-      "x": 1748,
-      "y": 31,
-      "zOrder": 18,
+      "width": 100,
+      "x": 1670,
+      "y": 50,
+      "zOrder": 1,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "height": 50,
+      "layer": "",
+      "locked": false,
+      "name": "moz",
+      "persistentUuid": "b4008e95-2098-40be-8fb8-473aef50167c",
+      "width": 100,
+      "x": 1025,
+      "y": 50,
+      "zOrder": 1,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "height": 1080,
+      "layer": "",
+      "locked": false,
+      "name": "background",
+      "persistentUuid": "a35acc0a-f51d-496b-9220-f0edeec31417",
+      "width": 1920,
+      "x": 0,
+      "y": 0,
+      "zOrder": 0,
       "numberProperties": [],
       "stringProperties": [],
       "initialVariables": []
@@ -222,12 +254,12 @@
       "effects": [],
       "behaviors": [],
       "string": "00:00:00",
-      "font": "",
-      "characterSize": 20,
+      "font": "FrostbiteBossFight-dL0Z.ttf",
+      "characterSize": 40,
       "color": {
-        "b": 0,
-        "g": 0,
-        "r": 0
+        "b": 226,
+        "g": 144,
+        "r": 74
       }
     },
     {
@@ -238,7 +270,37 @@
       "variables": [],
       "effects": [],
       "behaviors": [],
-      "animations": []
+      "animations": [
+        {
+          "name": "0",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": false,
+                  "image": "Timer.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
     },
     {
       "bold": true,
@@ -252,12 +314,12 @@
       "effects": [],
       "behaviors": [],
       "string": "",
-      "font": "",
-      "characterSize": 20,
+      "font": "FrostbiteBossFight-dL0Z.ttf",
+      "characterSize": 40,
       "color": {
-        "b": 0,
-        "g": 0,
-        "r": 0
+        "b": 226,
+        "g": 144,
+        "r": 74
       }
     },
     {
@@ -268,7 +330,37 @@
       "variables": [],
       "effects": [],
       "behaviors": [],
-      "animations": []
+      "animations": [
+        {
+          "name": "0",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": false,
+                  "image": "remainig.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
     },
     {
       "bold": true,
@@ -282,12 +374,12 @@
       "effects": [],
       "behaviors": [],
       "string": "",
-      "font": "",
-      "characterSize": 20,
+      "font": "FrostbiteBossFight-dL0Z.ttf",
+      "characterSize": 40,
       "color": {
-        "b": 0,
-        "g": 0,
-        "r": 0
+        "b": 226,
+        "g": 144,
+        "r": 74
       }
     },
     {
@@ -298,7 +390,37 @@
       "variables": [],
       "effects": [],
       "behaviors": [],
-      "animations": []
+      "animations": [
+        {
+          "name": "0",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": false,
+                  "image": "Eval_Time.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
     },
     {
       "bold": true,
@@ -312,12 +434,12 @@
       "effects": [],
       "behaviors": [],
       "string": "-1",
-      "font": "",
-      "characterSize": 20,
+      "font": "FrostbiteBossFight-dL0Z.ttf",
+      "characterSize": 40,
       "color": {
-        "b": 0,
-        "g": 0,
-        "r": 0
+        "b": 226,
+        "g": 144,
+        "r": 74
       }
     },
     {
@@ -339,7 +461,7 @@
               "sprites": [
                 {
                   "hasCustomCollisionMask": false,
-                  "image": "moz.png",
+                  "image": "basket-removebg-preview.png",
                   "points": [],
                   "originPoint": {
                     "name": "origine",
@@ -470,8 +592,8 @@
       "effects": [],
       "behaviors": [],
       "string": "",
-      "font": "",
-      "characterSize": 20,
+      "font": "FrostbiteBossFight-dL0Z.ttf",
+      "characterSize": 40,
       "color": {
         "b": 226,
         "g": 144,
@@ -487,7 +609,7 @@
       "behaviors": []
     },
     {
-      "bold": false,
+      "bold": true,
       "italic": false,
       "name": "branch_num_mozcoins_txt",
       "smoothed": true,
@@ -499,11 +621,11 @@
       "behaviors": [],
       "string": "0",
       "font": "",
-      "characterSize": 20,
+      "characterSize": 40,
       "color": {
-        "b": 0,
-        "g": 0,
-        "r": 0
+        "b": 35,
+        "g": 166,
+        "r": 245
       }
     },
     {
@@ -521,11 +643,11 @@
           "directions": [
             {
               "looping": false,
-              "timeBetweenFrames": 0.07999999821186066,
+              "timeBetweenFrames": 0.08,
               "sprites": [
                 {
                   "hasCustomCollisionMask": false,
-                  "image": "0-1-0.png",
+                  "image": "submit2.png",
                   "points": [],
                   "originPoint": {
                     "name": "origine",
@@ -561,11 +683,11 @@
           "directions": [
             {
               "looping": false,
-              "timeBetweenFrames": 0.07999999821186066,
+              "timeBetweenFrames": 0.08,
               "sprites": [
                 {
                   "hasCustomCollisionMask": false,
-                  "image": "back_logo-1.png",
+                  "image": "backTohome.png",
                   "points": [],
                   "originPoint": {
                     "name": "origine",
@@ -585,6 +707,57 @@
           ]
         }
       ]
+    },
+    {
+      "name": "moz",
+      "tags": "",
+      "type": "Sprite",
+      "updateIfNotVisible": false,
+      "variables": [],
+      "effects": [],
+      "behaviors": [],
+      "animations": [
+        {
+          "name": "0",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": false,
+                  "image": "banana.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "height": 32,
+      "name": "background",
+      "tags": "",
+      "texture": "Cartoon_Forest_BG_03.png",
+      "type": "TiledSpriteObject::TiledSprite",
+      "width": 32,
+      "variables": [],
+      "effects": [],
+      "behaviors": []
     }
   ],
   "events": [
@@ -729,6 +902,20 @@
           "parameters": [
             "",
             "\"2\""
+          ],
+          "subInstructions": []
+        },
+        {
+          "type": {
+            "inverted": false,
+            "value": "PlaySound"
+          },
+          "parameters": [
+            "",
+            "bensound-creativeminds.mp3",
+            "yes",
+            "20",
+            "1"
           ],
           "subInstructions": []
         }
@@ -1090,6 +1277,17 @@
         {
           "type": {
             "inverted": false,
+            "value": "UnloadSound"
+          },
+          "parameters": [
+            "",
+            "bensound-creativeminds.mp3"
+          ],
+          "subInstructions": []
+        },
+        {
+          "type": {
+            "inverted": false,
             "value": "Scene"
           },
           "parameters": [
@@ -1360,6 +1558,27 @@
           "parameters": [
             "",
             ""
+          ],
+          "subInstructions": []
+        }
+      ],
+      "events": []
+    },
+    {
+      "disabled": false,
+      "folded": false,
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [],
+      "actions": [
+        {
+          "type": {
+            "inverted": false,
+            "value": "TiledSpriteObject::XOffset"
+          },
+          "parameters": [
+            "background",
+            "+",
+            "100 * TimeDelta()"
           ],
           "subInstructions": []
         }

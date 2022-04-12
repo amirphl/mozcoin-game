@@ -45,7 +45,11 @@
     },
     "authorIds": [],
     "categories": [],
-    "playableDevices": [],
+    "playableDevices": [
+      "keyboard",
+      "gamepad",
+      "mobile"
+    ],
     "extensionProperties": [
       {
         "extension": "Firebase",
@@ -721,6 +725,310 @@
         "metadata": "",
         "name": "0-1-0.png",
         "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "return-back.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "return-back.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "submit.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "submit.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "LoadingIcon.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "LoadingIcon.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "LoadingIcon-2.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "LoadingIcon-2.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "LoadingIcon-3.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "LoadingIcon-3.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "LoadingIcon-4.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "LoadingIcon-4.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "file": "FrostbiteBossFight-dL0Z.ttf",
+        "kind": "font",
+        "metadata": "",
+        "name": "FrostbiteBossFight-dL0Z.ttf",
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "levels.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "levels.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "history.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "history.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "setting.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "setting.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "arrow.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "arrow.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "arrow2.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "arrow2.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "play2.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "play2.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "btc-1.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "btc-1.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "btc-2.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "btc-2.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "btc-3.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "btc-3.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "btc-4.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "btc-4.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "eth-1.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "eth-1.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "eth-2.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "eth-2.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "ada-1.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "ada-1.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "ada-2.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "ada-2.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "ada-3.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "ada-3.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "ada-4.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "ada-4.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "home_background.jpg",
+        "kind": "image",
+        "metadata": "",
+        "name": "home_background.jpg",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "file": "bensound-anewbeginning.mp3",
+        "kind": "audio",
+        "metadata": "",
+        "name": "bensound-anewbeginning.mp3",
+        "preloadAsMusic": false,
+        "preloadAsSound": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Timer.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Timer.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "remainig.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "remainig.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Eval_Time.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Eval_Time.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "basket-removebg-preview.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "basket-removebg-preview.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "submit2.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "submit2.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "backTohome.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "backTohome.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "banana.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "banana.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Cartoon_Forest_BG_03.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Cartoon_Forest_BG_03.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "file": "bensound-creativeminds.mp3",
+        "kind": "audio",
+        "metadata": "",
+        "name": "bensound-creativeminds.mp3",
+        "preloadAsMusic": false,
+        "preloadAsSound": false,
         "userAdded": true
       }
     ],

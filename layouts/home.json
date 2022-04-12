@@ -30,28 +30,12 @@
     {
       "angle": 0,
       "customSize": true,
-      "height": 100,
-      "layer": "Second layer",
-      "locked": false,
-      "name": "leaderboard_logo",
-      "persistentUuid": "5526bb1d-5eb7-48b0-8481-415598bdb0b7",
-      "width": 100,
-      "x": 1770,
-      "y": 150,
-      "zOrder": 1,
-      "numberProperties": [],
-      "stringProperties": [],
-      "initialVariables": []
-    },
-    {
-      "angle": 0,
-      "customSize": true,
-      "height": 100,
+      "height": 150,
       "layer": "Second layer",
       "locked": false,
       "name": "level_logo",
       "persistentUuid": "5a6b4a8c-5cae-49d7-b449-71b948f0b8f8",
-      "width": 200,
+      "width": 150,
       "x": 50,
       "y": 50,
       "zOrder": 1,
@@ -67,15 +51,15 @@
     {
       "angle": 0,
       "customSize": true,
-      "height": 55,
+      "height": 50,
       "layer": "Second layer",
       "locked": false,
       "name": "level_txt",
       "persistentUuid": "079afac9-c9c1-4ed8-947b-4a165f820d70",
-      "width": 239,
-      "x": 150,
+      "width": 200,
+      "x": 250,
       "y": 100,
-      "zOrder": 2,
+      "zOrder": 1,
       "numberProperties": [],
       "stringProperties": [],
       "initialVariables": []
@@ -105,45 +89,8 @@
       "name": "num_mozcoins_txt",
       "persistentUuid": "b4329608-eb57-49a7-a0bb-bf81d9e6ac91",
       "width": 100,
-      "x": 440,
-      "y": 155,
-      "zOrder": 1,
-      "numberProperties": [],
-      "stringProperties": [],
-      "initialVariables": []
-    },
-    {
-      "angle": 0,
-      "customSize": true,
-      "height": 100,
-      "layer": "Second layer",
-      "locked": false,
-      "name": "history_logo",
-      "persistentUuid": "0d565d9c-1f43-4d68-b1af-c8de624e1470",
-      "width": 100,
-      "x": 1520,
-      "y": 50,
-      "zOrder": 1,
-      "numberProperties": [
-        {
-          "name": "animation",
-          "value": 0
-        }
-      ],
-      "stringProperties": [],
-      "initialVariables": []
-    },
-    {
-      "angle": 0,
-      "customSize": true,
-      "height": 100,
-      "layer": "Second layer",
-      "locked": false,
-      "name": "settings_logo",
-      "persistentUuid": "eb51d4eb-feb1-4a7d-a00b-1907cb8a837a",
-      "width": 100,
-      "x": 1770,
-      "y": 830,
+      "x": 550,
+      "y": 100,
       "zOrder": 1,
       "numberProperties": [],
       "stringProperties": [],
@@ -157,7 +104,7 @@
       "locked": false,
       "name": "left_arrow_logo",
       "persistentUuid": "8ec4f8a9-7543-47a2-9869-04d62b5c48e6",
-      "width": 100,
+      "width": 150,
       "x": 50,
       "y": 490,
       "zOrder": 1,
@@ -173,7 +120,7 @@
       "locked": false,
       "name": "right_arrow_logo",
       "persistentUuid": "ee4fe7f1-24eb-452b-b584-97d8c8f4901e",
-      "width": 100,
+      "width": 150,
       "x": 1770,
       "y": 490,
       "zOrder": 1,
@@ -190,7 +137,7 @@
       "name": "name_txt",
       "persistentUuid": "35d4a08f-84dc-4a47-95d3-324a5ae8c6e5",
       "width": 250,
-      "x": 1660,
+      "x": 1610,
       "y": 50,
       "zOrder": 1,
       "numberProperties": [],
@@ -224,6 +171,22 @@
       "width": 400,
       "x": 760,
       "y": 340,
+      "zOrder": 1,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "height": 1080,
+      "layer": "",
+      "locked": false,
+      "name": "background",
+      "persistentUuid": "7342e56e-cab6-4de7-b18c-a77f76e5795a",
+      "width": 1920,
+      "x": 0,
+      "y": 0,
       "zOrder": 1,
       "numberProperties": [],
       "stringProperties": [],
@@ -283,12 +246,12 @@
       "effects": [],
       "behaviors": [],
       "string": "-1",
-      "font": "",
+      "font": "FrostbiteBossFight-dL0Z.ttf",
       "characterSize": 40,
       "color": {
-        "b": 35,
-        "g": 166,
-        "r": 245
+        "b": 226,
+        "g": 144,
+        "r": 74
       }
     },
     {
@@ -310,7 +273,7 @@
               "sprites": [
                 {
                   "hasCustomCollisionMask": false,
-                  "image": "level.png",
+                  "image": "levels.png",
                   "points": [],
                   "originPoint": {
                     "name": "origine",
@@ -342,8 +305,8 @@
       "variables": [],
       "effects": [],
       "behaviors": [],
-      "string": "level: -1",
-      "font": "",
+      "string": "-1",
+      "font": "FrostbiteBossFight-dL0Z.ttf",
       "characterSize": 40,
       "color": {
         "b": 226,
@@ -410,7 +373,7 @@
               "sprites": [
                 {
                   "hasCustomCollisionMask": false,
-                  "image": "hisotry.png",
+                  "image": "history.png",
                   "points": [],
                   "originPoint": {
                     "name": "origine",
@@ -450,7 +413,7 @@
               "sprites": [
                 {
                   "hasCustomCollisionMask": false,
-                  "image": "cog.png",
+                  "image": "setting.png",
                   "points": [],
                   "originPoint": {
                     "name": "origine",
@@ -510,7 +473,7 @@
               "sprites": [
                 {
                   "hasCustomCollisionMask": false,
-                  "image": "left-arrow.png",
+                  "image": "arrow.png",
                   "points": [],
                   "originPoint": {
                     "name": "origine",
@@ -550,7 +513,7 @@
               "sprites": [
                 {
                   "hasCustomCollisionMask": false,
-                  "image": "right-arrow.png",
+                  "image": "arrow2.png",
                   "points": [],
                   "originPoint": {
                     "name": "origine",
@@ -590,7 +553,7 @@
               "sprites": [
                 {
                   "hasCustomCollisionMask": false,
-                  "image": "play.png",
+                  "image": "play2.png",
                   "points": [],
                   "originPoint": {
                     "name": "origine",
@@ -625,12 +588,63 @@
           "useMultipleDirections": false,
           "directions": [
             {
-              "looping": false,
-              "timeBetweenFrames": 0.08,
+              "looping": true,
+              "timeBetweenFrames": 1,
               "sprites": [
                 {
                   "hasCustomCollisionMask": false,
-                  "image": "btc.png",
+                  "image": "btc-1.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": []
+                },
+                {
+                  "hasCustomCollisionMask": false,
+                  "image": "btc-2.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": []
+                },
+                {
+                  "hasCustomCollisionMask": false,
+                  "image": "btc-3.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": []
+                },
+                {
+                  "hasCustomCollisionMask": false,
+                  "image": "btc-4.png",
                   "points": [],
                   "originPoint": {
                     "name": "origine",
@@ -654,12 +668,29 @@
           "useMultipleDirections": false,
           "directions": [
             {
-              "looping": false,
-              "timeBetweenFrames": 0.08,
+              "looping": true,
+              "timeBetweenFrames": 1,
               "sprites": [
                 {
                   "hasCustomCollisionMask": false,
-                  "image": "eth.png",
+                  "image": "eth-1.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": []
+                },
+                {
+                  "hasCustomCollisionMask": false,
+                  "image": "eth-2.png",
                   "points": [],
                   "originPoint": {
                     "name": "origine",
@@ -683,12 +714,103 @@
           "useMultipleDirections": false,
           "directions": [
             {
+              "looping": true,
+              "timeBetweenFrames": 1,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": false,
+                  "image": "ada-1.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": []
+                },
+                {
+                  "hasCustomCollisionMask": false,
+                  "image": "ada-2.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": []
+                },
+                {
+                  "hasCustomCollisionMask": false,
+                  "image": "ada-3.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": []
+                },
+                {
+                  "hasCustomCollisionMask": false,
+                  "image": "ada-4.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "background",
+      "tags": "",
+      "type": "Sprite",
+      "updateIfNotVisible": false,
+      "variables": [],
+      "effects": [],
+      "behaviors": [],
+      "animations": [
+        {
+          "name": "",
+          "useMultipleDirections": false,
+          "directions": [
+            {
               "looping": false,
               "timeBetweenFrames": 0.08,
               "sprites": [
                 {
                   "hasCustomCollisionMask": false,
-                  "image": "ada.png",
+                  "image": "home_background.jpg",
                   "points": [],
                   "originPoint": {
                     "name": "origine",
@@ -784,6 +906,20 @@
           "parameters": [
             "",
             "\"0\""
+          ],
+          "subInstructions": []
+        },
+        {
+          "type": {
+            "inverted": false,
+            "value": "PlaySound"
+          },
+          "parameters": [
+            "",
+            "bensound-anewbeginning.mp3",
+            "yes",
+            "20",
+            "1"
           ],
           "subInstructions": []
         }
@@ -931,6 +1067,17 @@
         {
           "type": {
             "inverted": false,
+            "value": "UnloadSound"
+          },
+          "parameters": [
+            "",
+            "bensound-anewbeginning.mp3"
+          ],
+          "subInstructions": []
+        },
+        {
+          "type": {
+            "inverted": false,
             "value": "Scene"
           },
           "parameters": [
@@ -997,6 +1144,17 @@
         }
       ],
       "actions": [
+        {
+          "type": {
+            "inverted": false,
+            "value": "UnloadSound"
+          },
+          "parameters": [
+            "",
+            "bensound-anewbeginning.mp3"
+          ],
+          "subInstructions": []
+        },
         {
           "type": {
             "inverted": false,
@@ -1069,6 +1227,17 @@
         {
           "type": {
             "inverted": false,
+            "value": "UnloadSound"
+          },
+          "parameters": [
+            "",
+            "bensound-anewbeginning.mp3"
+          ],
+          "subInstructions": []
+        },
+        {
+          "type": {
+            "inverted": false,
             "value": "Scene"
           },
           "parameters": [
@@ -1135,6 +1304,17 @@
         }
       ],
       "actions": [
+        {
+          "type": {
+            "inverted": false,
+            "value": "UnloadSound"
+          },
+          "parameters": [
+            "",
+            "bensound-anewbeginning.mp3"
+          ],
+          "subInstructions": []
+        },
         {
           "type": {
             "inverted": false,
