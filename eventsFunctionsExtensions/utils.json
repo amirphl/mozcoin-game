@@ -417,6 +417,50 @@
       ],
       "parameters": [],
       "objectGroups": []
+    },
+    {
+      "description": "Display Price IFrame",
+      "fullName": "Display Price IFrame",
+      "functionType": "Action",
+      "group": "",
+      "name": "display_price_iframe",
+      "private": false,
+      "sentence": "Display Price IFrame",
+      "events": [
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::JsCode",
+          "inlineCode": "const domain = runtimeScene.getGame().getVariables().get(\"domain\").getAsString();\nconst selected_coin_index = runtimeScene.getGame().getVariables().get(\"selected_coin_index\").getAsNumber();\nconst coins = runtimeScene.getGame().getVariables().get(\"coins\").toJSObject().coins;\nconst selected_coin_name = coins[selected_coin_index];\n\nconst iframe = document.createElement(\"iframe\");\n\niframe.src = `${domain}/coins/${selected_coin_name}.html`;\niframe.setAttribute(\"width\", \"800\");\niframe.setAttribute(\"height\", \"600\");\niframe.style.top = \"200px\";\niframe.style.left = \"100px\";\niframe.frameBorder = \"no\";\niframe.scrolling = \"no\";\niframe.style.position = \"absolute\";\niframe.style.zIndex = \"1000\";\niframe.id = \"price-iframe\";\ndocument.body.appendChild(iframe);",
+          "parameterObjects": "",
+          "useStrict": true,
+          "eventsSheetExpanded": false
+        }
+      ],
+      "parameters": [],
+      "objectGroups": []
+    },
+    {
+      "description": "Delete Price IFrame",
+      "fullName": "Delete Price IFrame",
+      "functionType": "Action",
+      "group": "",
+      "name": "delete_price_iframe",
+      "private": false,
+      "sentence": "Delete Price IFrame",
+      "events": [
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::JsCode",
+          "inlineCode": "document.getElementById(\"price-iframe\").remove();",
+          "parameterObjects": "",
+          "useStrict": true,
+          "eventsSheetExpanded": false
+        }
+      ],
+      "parameters": [],
+      "objectGroups": []
     }
   ],
   "eventsBasedBehaviors": []

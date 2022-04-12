@@ -608,6 +608,17 @@
         {
           "type": {
             "inverted": false,
+            "value": "Utils::display_price_iframe"
+          },
+          "parameters": [
+            "",
+            ""
+          ],
+          "subInstructions": []
+        },
+        {
+          "type": {
+            "inverted": false,
             "value": "Utils::update_pred_params"
           },
           "parameters": [
@@ -1054,6 +1065,17 @@
         }
       ],
       "actions": [
+        {
+          "type": {
+            "inverted": false,
+            "value": "Utils::delete_price_iframe"
+          },
+          "parameters": [
+            "",
+            ""
+          ],
+          "subInstructions": []
+        },
         {
           "type": {
             "inverted": false,
