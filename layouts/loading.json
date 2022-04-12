@@ -70,7 +70,7 @@
           "parameters": [
             "domain",
             "=",
-            "\"http://localhost:8000\""
+            "\"http://mozgame.ir\""
           ],
           "subInstructions": []
         }
