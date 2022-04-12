@@ -720,6 +720,17 @@
             "\"1\""
           ],
           "subInstructions": []
+        },
+        {
+          "type": {
+            "inverted": false,
+            "value": "ResetTimer"
+          },
+          "parameters": [
+            "",
+            "\"2\""
+          ],
+          "subInstructions": []
         }
       ],
       "events": []
@@ -1285,6 +1296,66 @@
           "type": {
             "inverted": false,
             "value": "Utils::update_branch_inputs"
+          },
+          "parameters": [
+            "",
+            ""
+          ],
+          "subInstructions": []
+        }
+      ],
+      "events": []
+    },
+    {
+      "disabled": false,
+      "folded": false,
+      "type": "BuiltinCommonInstructions::Comment",
+      "color": {
+        "b": 109,
+        "g": 230,
+        "r": 255,
+        "textB": 0,
+        "textG": 0,
+        "textR": 0
+      },
+      "comment": "Periodically update user.",
+      "comment2": ""
+    },
+    {
+      "disabled": false,
+      "folded": false,
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [
+        {
+          "type": {
+            "inverted": false,
+            "value": "CompareTimer"
+          },
+          "parameters": [
+            "",
+            "\"2\"",
+            ">",
+            "60"
+          ],
+          "subInstructions": []
+        }
+      ],
+      "actions": [
+        {
+          "type": {
+            "inverted": false,
+            "value": "ResetTimer"
+          },
+          "parameters": [
+            "",
+            "\"2\""
+          ],
+          "subInstructions": []
+        },
+        {
+          "type": {
+            "inverted": false,
+            "value": "Utils::update_user"
           },
           "parameters": [
             "",
