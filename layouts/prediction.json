@@ -185,7 +185,7 @@
       "name": "submit_logo",
       "persistentUuid": "9d7a4a75-4741-43b6-8ba3-50132d4852b3",
       "width": 84,
-      "x": 1702,
+      "x": 1367,
       "y": 952,
       "zOrder": 17,
       "numberProperties": [],
@@ -457,6 +457,26 @@
           ]
         }
       ]
+    },
+    {
+      "bold": true,
+      "italic": false,
+      "name": "branch_value",
+      "smoothed": true,
+      "tags": "",
+      "type": "TextObject::Text",
+      "underlined": false,
+      "variables": [],
+      "effects": [],
+      "behaviors": [],
+      "string": "",
+      "font": "",
+      "characterSize": 20,
+      "color": {
+        "b": 226,
+        "g": 144,
+        "r": 74
+      }
     },
     {
       "name": "branch_num_mozcoins_capture",
@@ -903,6 +923,17 @@
               },
               "parameters": [
                 "branch_logo",
+                ""
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "Delete"
+              },
+              "parameters": [
+                "branch_value",
                 ""
               ],
               "subInstructions": []
