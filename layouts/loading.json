@@ -179,7 +179,7 @@
           "parameters": [
             "domain",
             "=",
-            "\"http://mozgame.ir\""
+            "\"https://mozgame.ir\""
           ],
           "subInstructions": []
         }
